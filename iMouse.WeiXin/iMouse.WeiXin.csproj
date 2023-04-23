@@ -3,7 +3,6 @@
 	<PropertyGroup>
 		<TargetFramework>net6.0</TargetFramework>
 		<Nullable>enable</Nullable>
-		<PackOnBuild>true</PackOnBuild>
 		<PackageId>iMouse.WeiXin</PackageId>
 		<PackageVersion>0.2.8</PackageVersion>
 		<Authors>iForever</Authors>
@@ -16,6 +15,7 @@
 		<Description>Encapsulates WeChat related API operations to provide a simple, easy-to-use solution.</Description>
 		<Configurations>Release;Debug</Configurations>
 		<ReleaseVersion>0.2.8</ReleaseVersion>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	</PropertyGroup>
 	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
 		<DebugType>
@@ -127,5 +127,8 @@
 		<None Remove="MiniProgram\Live\Goods\" />
 		<None Remove="MiniProgram\Live\Role\" />
 		<None Remove="MiniProgram\Live\Subscribe\" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="README.md" Pack="true" PackagePath="" />
 	</ItemGroup>
 </Project>
