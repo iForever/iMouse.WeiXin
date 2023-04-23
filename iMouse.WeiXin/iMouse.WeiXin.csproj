@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<PackOnBuild>true</PackOnBuild>
+		<PackageId>iMouse.WeiXin</PackageId>
+		<PackageVersion>0.2.8</PackageVersion>
+		<Authors>iForever</Authors>
+		<Company>iMouse Studio</Company>
+		<Copyright>iForever</Copyright>
+		<Owners>iForever</Owners>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryUrl>https://github.com/iForever/iMouse.SDKs.git</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/iForever/iMouse.SDKs</PackageProjectUrl>
+		<Description>Encapsulates WeChat related API operations to provide a simple, easy-to-use solution.</Description>
+		<Configurations>Release;Debug</Configurations>
+		<ReleaseVersion>0.2.8</ReleaseVersion>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+		<DebugType>
+		</DebugType>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+		<WarningLevel>4</WarningLevel>
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+		<DocumentationFile>
+		</DocumentationFile>
+	</PropertyGroup>
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+	<ItemGroup>
+		<Folder Include="ApiInvoker\" />
+		<Folder Include="Utilities\" />
+		<Folder Include="Models\" />
+		<Folder Include="Global\" />
+		<Folder Include="Options\" />
+		<Folder Include="Global\Credentials\" />
+		<Folder Include="MiniProgram\User\" />
+		<Folder Include="MiniProgram\QRCodeLink\" />
+		<Folder Include="MiniProgram\CustomService\" />
+		<Folder Include="MiniProgram\Message\" />
+		<Folder Include="MiniProgram\Message\UniformMessage\" />
+		<Folder Include="MiniProgram\Message\ActivityMessage\" />
+		<Folder Include="OpenApi\" />
+		<Folder Include="Offical\" />
+		<Folder Include="Offical\WebAuthorize\" />
+		<Folder Include="Offical\UserManage\" />
+		<Folder Include="Offical\UserManage\UserTags\" />
+		<Folder Include="Offical\UserManage\UserInfo\" />
+		<Folder Include="Offical\UserManage\BlackList\" />
+		<Folder Include="Global\SubscribeMessage\" />
+		<Folder Include="Global\SubscribeMessage\Primitives\" />
+		<Folder Include="Global\Credentials\Primitives\" />
+		<Folder Include="Offical\WebAuthorize\Primitives\" />
+		<Folder Include="MiniProgram\QRCodeLink\Primitives\" />
+		<Folder Include="MiniProgram\User\Primitives\" />
+		<Folder Include="OpenApi\Primitives\" />
+		<Folder Include="MiniProgram\Authorize\Primitives\" />
+		<Folder Include="Offical\JSInterop\" />
+		<Folder Include="Offical\JSInterop\Primitives\" />
+		<Folder Include="Cache\" />
+		<Folder Include="MiniProgram\Security\" />
+		<Folder Include="MiniProgram\Security\Primitives\" />
+		<Folder Include="MiniProgram\Analysis\" />
+		<Folder Include="MiniProgram\Analysis\VisitRetain\" />
+		<Folder Include="MiniProgram\Analysis\VisitTrend\" />
+		<Folder Include="MiniProgram\Analysis\Others\" />
+		<Folder Include="MiniProgram\Live\" />
+		<Folder Include="MiniProgram\Live\Studio\" />
+		<Folder Include="MiniProgram\Live\Goods\" />
+		<Folder Include="MiniProgram\Live\Role\" />
+		<Folder Include="MiniProgram\Live\Subscribe\" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Options" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="7.0.0" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Remove="Global\" />
+		<None Remove="Options\" />
+		<None Remove="Microsoft.Extensions.DependencyInjection.Abstractions" />
+		<None Remove="Global\Authorize\" />
+		<None Remove="MiniProgram\User\" />
+		<None Remove="MiniProgram\QRCode\" />
+		<None Remove="MiniProgram\CustomService\" />
+		<None Remove="MiniProgram\Message\" />
+		<None Remove="MiniProgram\Message\UniformMessage\" />
+		<None Remove="MiniProgram\Message\ActivityMessage\" />
+		<None Remove="Microsoft.Extensions.Configuration" />
+		<None Remove="Microsoft.Extensions.Options" />
+		<None Remove="Microsoft.Extensions.Configuration.Abstractions" />
+		<None Remove="Microsoft.Extensions.Configuration.Binder" />
+		<None Remove="Microsoft.Extensions.Options.ConfigurationExtensions" />
+		<None Remove="OpenApi\" />
+		<None Remove="Offical\" />
+		<None Remove="Offical\WebAuthorize\" />
+		<None Remove="Offical\User\" />
+		<None Remove="Offical\UserManage\UserTags\" />
+		<None Remove="Offical\UserManage\UserInfo\" />
+		<None Remove="Offical\UserManage\BlackList\" />
+		<None Remove="Global\SubscribeMessage\" />
+		<None Remove="Global\SubscribeMessage\Primitives\" />
+		<None Remove="Global\Credentials\Primitives\" />
+		<None Remove="Offical\OpenAuthorize\Primitives\" />
+		<None Remove="MiniProgram\QRCodeLink\Primitives\" />
+		<None Remove="MiniProgram\User\Primitives\" />
+		<None Remove="OpenApi\Primitives\" />
+		<None Remove="MiniProgram\Authorize\Primitives\" />
+		<None Remove="Offical\JSInterop\" />
+		<None Remove="Offical\JSInterop\Primitives\" />
+		<None Remove="Cache\" />
+		<None Remove="Microsoft.Extensions.Caching.Memory" />
+		<None Remove="Furion.Pure" />
+		<None Remove="MiniProgram\Security\" />
+		<None Remove="MiniProgram\Security\Primitives\" />
+		<None Remove="MiniProgram\Analysis\" />
+		<None Remove="MiniProgram\Analysis\Primitives\" />
+		<None Remove="MiniProgram\Analysis\VisitTrend\" />
+		<None Remove="MiniProgram\Analysis\Others\" />
+		<None Remove="MiniProgram\Live\" />
+		<None Remove="MiniProgram\Live\Studio\" />
+		<None Remove="MiniProgram\Live\Goods\" />
+		<None Remove="MiniProgram\Live\Role\" />
+		<None Remove="MiniProgram\Live\Subscribe\" />
+	</ItemGroup>
+</Project>
