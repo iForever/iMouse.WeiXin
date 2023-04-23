@@ -1,0 +1,28 @@
+name: iMouse.WeiXin
+
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: 6.0.x
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --configuration Release  --no-restore
+    - name: Install nuget 
+      uses: nuget/setup-nuget@v1
+      with:        
+        nuget-version: '5.x'
+    - name: Publish to nuget
+      run: |
+        nuget push ./iMouse.WeiXin/bin/Release/*.nupkg -Source https://api.nuget.org/v3/index.json -SkipDuplicate -ApiKey ${{ secrets.NugetKey }} -NoSymbol
