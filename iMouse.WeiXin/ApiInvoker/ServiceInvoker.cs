@@ -109,7 +109,7 @@ namespace iMouse.WeiXin.ApiInvoker
                 throw new Exception("服务器返回结果异常");
             }
 
-            if ((result.ErrCode == 40014 || result.ErrCode == 40001) && request is BaseTokenRequest tokenRequest)
+            if ((result.ErrCode == 40014 || result.ErrCode == 40001 || result.ErrCode == 42001) && request is BaseTokenRequest tokenRequest)
             {
                 // Access Token 无效, 强制重新获取
                 tokenRequest.AccessToken = await GetRequestAccessToken(request.AppName, true);
